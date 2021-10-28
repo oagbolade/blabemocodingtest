@@ -8,8 +8,16 @@ import miniArc from "./assets/images/miniAcr.svg";
 import avatar1 from "./assets/images/avatar1.png";
 import rating from "./assets/images/rating.svg";
 import emptyRating from "./assets/images/emptyRating.svg";
+import briefcase from "./assets/images/briefcase.svg";
+import envelope from "./assets/images/envelope.svg";
+import ebay from "./assets/images/ebay.png";
+import monster from "./assets/images/monster.png";
+import indeed from "./assets/images/indeed.png";
+import linkedin from "./assets/images/linkedin.png";
+import godaddy from "./assets/images/godaddy.png";
 import { fadeIn, bounce } from "react-animations";
 import Radium, { StyleRoot } from "radium";
+import ReviewOne from "./components/Reviews/ReviewOne";
 
 const styles = {
   fade: {
@@ -84,7 +92,7 @@ function App() {
           ) : (
             <StyleRoot>
               <img
-                className="banner-img"
+                className="banner-img secondary-img"
                 style={styles.bounce}
                 src={smilingLady}
                 alt="loading"
@@ -145,9 +153,97 @@ function App() {
           />
         </div>
       </div>
-      <section></section>
-      <section></section>
-      <section></section>
+      <section className="p-6">
+        <div className="review-heading text-center mb-20">
+          <div className="heading-1 mb-2">Featured Reviews</div>
+          <div className="heading-2">
+            Here are some from the review been done by some of the employees on
+            this platform.
+          </div>
+        </div>
+        <div className="review-section mx-auto">
+          <div className="review-box">
+            <div className="p-6">
+              <div className="text-2 flex mb-4">
+                <img src={rating} alt="loading" />
+                <img src={rating} alt="loading" />
+                <img src={rating} alt="loading" />
+                <img src={rating} alt="loading" />
+                <img src={emptyRating} alt="loading" />
+                <span className="num-rating">4.0</span>
+              </div>
+              <div className="text-1 mb-3">
+                Great place to work with the good work culture and people
+                skills.
+              </div>
+
+              <div className="flex mb-3">
+                <div className="flex-1- mid-text-1 p-1 text-center">
+                  sexual assault
+                </div>
+                <div className="mt-2 mid-text-2">
+                  <img className="inline mr-2" src={briefcase} alt="loading" />
+                  Google
+                </div>
+              </div>
+            </div>
+
+            <div className="avatar-section p-5">
+              <div className="flex avatar-section pt-4-">
+                <img className="avatar" src={avatar1} alt="loading" />
+                <div className="mt-2">
+                  <div className="text-2 ml-2">Anonymous</div>
+                  <div className="text-3 ml-2">Business Analysis</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mx-20-">
+            <ReviewOne />
+          </div>
+          <div>
+            <ReviewOne />
+          </div>
+
+          <div>
+            <ReviewOne />
+          </div>
+          <div className="mx-20-">
+            <ReviewOne />
+          </div>
+          <div>
+            <ReviewOne />
+          </div>
+        </div>
+      </section>
+      <section className="flex subscribe-section">
+        <div className="py-20 mx-auto section-1">
+          <div className="text-1">Subscribe to our Newsletter</div>
+          <div className="mt-2 mb-4 text-2 justify-content">
+            Get latest update lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here
+          </div>
+          <div>
+            <div className="input-form mb-10">
+              <input placeholder="Enter a valid email address" />
+              <button className="ml-2 form-button text-white">Submit</button>
+            </div>
+          </div>
+        </div>
+        <div className="section-2">
+          <img className="mx-auto py-20" src={envelope} alt="loading" />
+        </div>
+      </section>
+      <section className="social-section">
+        <div className="flex py-6">
+          <img className="mx-auto" src={ebay} alt="loading" />
+          <img className="mx-auto" src={linkedin} alt="loading" />
+          <img className="mx-auto" src={indeed} alt="loading" />
+          <img className="mx-auto" src={godaddy} alt="loading" />
+          <img className="mx-auto" src={monster} alt="loading" />
+        </div>
+      </section>
       <footer></footer>
     </div>
   );

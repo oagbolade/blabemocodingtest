@@ -51,24 +51,24 @@ nav ul li {
 // Banner Section
 .banner-section {
   background-color: #ffebff;
-  height: 735px;
+  height: 677px;
   width: 100%;
 }
 
-.input-form input {
+.banner-section .input-form input {
   border-radius: 6px;
   background-color: white;
   width: 556px;
   height: 72px;
 }
 
-.input-form input::placeholder {
+.banner-section .input-form input::placeholder {
   color: #dedede;
   font-size: 17px;
   padding-left: 26px;
 }
 
-.input-form .form-button {
+.banner-section .input-form .form-button {
   background-color: $orange-color;
   font-size: 17px;
   width: 133px;
@@ -192,20 +192,17 @@ nav ul li {
   color: #6c6c6c;
 }
 
+.review-box .text-1,
 .banner-mini-3 .text-1 {
-  height: 22.869565963745117px;
-  width: 208.113037109375px;
-  left: 685.4434776306152px;
-  top: 594.31298828125px;
+  width: 207px;
   color: #8d8d8d;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
   line-height: 15px;
   letter-spacing: 0em;
-  text-align: left;
 }
 
+.review-box .text-2,
 .banner-mini-3 .text-2 {
   font-size: 11px;
   font-weight: 400;
@@ -214,6 +211,7 @@ nav ul li {
   color: #6c6c6c;
 }
 
+.review-box .text-3,
 .banner-mini-3 .text-3 {
   font-size: 11px;
   font-style: normal;
@@ -230,6 +228,160 @@ nav ul li {
   left: 679.3449096679688px;
   top: 630.1419677734375px;
   border-radius: 0px;
+}
+
+.secondary-img {
+  width: 90%;
+  margin-left: 80px;
+}
+
+// Review Section
+.review-heading {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.review-heading .heading-1 {
+  font-size: 29px;
+  font-weight: 800;
+  line-height: 35px;
+  color: #303030;
+}
+
+.review-heading .heading-2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #8d8d8d;
+}
+
+.review-box {
+  height: 225px;
+  width: 290px;
+  border-radius: 6px;
+  box-shadow: 0px 5px 10px 2px #0000000a;
+}
+
+.review-box .mid-text-1 {
+  width: 101px;
+  color: #ff6634;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  background-color: #fef7f5;
+  border-radius: 6px;
+}
+
+.review-box .mid-text-2 {
+  width: 100px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  letter-spacing: 0em;
+  color: #000000;
+  text-align: right;
+}
+
+.review-box .avatar-section {
+  background-color: #fcfcfc;
+  height: 70px;
+}
+
+.review-box {
+  justify-content: space-between;
+}
+
+.num-rating {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 13px;
+  margin-left: 4px;
+  margin-top: 4px;
+  color: #000000;
+}
+
+.review-section {
+  display: grid;
+  height: 600px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 60%;
+}
+
+// subscribe-section
+
+.subscribe-section {
+  background: #f8f8f8;
+  width: 100%;
+  height: 380px;
+}
+
+.subscribe-section .section-1 {
+  width: 60%;
+  padding-left: 120px;
+}
+
+.subscribe-section .section-2 {
+  width: 40%;
+}
+
+.subscribe-section .text-1 {
+  font-size: 29px;
+  font-weight: 800;
+  line-height: 35px;
+  letter-spacing: 0em;
+  color: #303030;
+}
+
+.subscribe-section .text-2 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #8d8d8d;
+  width: 557px;
+}
+
+.subscribe-section .input-form input {
+  border-radius: 6px;
+  background-color: white;
+  height: 54px;
+  width: 479px;
+  left: 201px;
+  top: 1851px;
+  border-radius: 6px;
+}
+
+.subscribe-section .input-form input::placeholder {
+  color: #dedede;
+  height: 18px;
+  width: 203px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  padding-left: 15px;
+}
+
+.subscribe-section .input-form .form-button {
+  background-color: $orange-color;
+  height: 54px;
+  width: 133px;
+  left: 691px;
+  top: 1851px;
+  border-radius: 4px;
+}
+
+// social-section
+.social-section {
+  background-color: #fefefe;
+  height: 133px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.social-section img {
+  height: 61.721229553222656px;
+  width: 152px;
 }
 
 @media (max-width: 600px) {
