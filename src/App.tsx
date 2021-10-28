@@ -1,14 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import openQuote from "./assets/images/openQuote.svg";
 import closingQuotes from "./assets/images/closingQuotes.svg";
 import smilingMan from "./assets/images/smilingMan.png";
+import smilingLady from "./assets/images/smilingLady2.png";
 import miniArc from "./assets/images/miniAcr.svg";
 import avatar1 from "./assets/images/avatar1.png";
 import rating from "./assets/images/rating.svg";
 import emptyRating from "./assets/images/emptyRating.svg";
+import { fadeIn, bounce } from "react-animations";
+import Radium, { StyleRoot } from "radium";
+
+const styles = {
+  fade: {
+    animation: "x 1s",
+    animationName: Radium.keyframes(fadeIn, "bounce"),
+    animationDuration: "3s",
+  },
+  bounce: {
+    animation: "x 1s",
+    animationName: Radium.keyframes(bounce, "bounce"),
+    animationDuration: "3s",
+  },
+};
 
 function App() {
+  const [firstElement, setFirstElement] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setFirstElement(false);
+    }, 3000);
+  }, []);
+
   return (
     <div>
       <nav className="navbar">
@@ -48,7 +72,26 @@ function App() {
           <div className="banner-mini-1 p-2">
             <img src={miniArc} alt="loading" />
           </div>
-          <img className="banner-img" src={smilingMan} alt="loading" />
+          {firstElement ? (
+            <StyleRoot>
+              <img
+                className="banner-img"
+                style={styles.fade}
+                src={smilingMan}
+                alt="loading"
+              />
+            </StyleRoot>
+          ) : (
+            <StyleRoot>
+              <img
+                className="banner-img"
+                style={styles.bounce}
+                src={smilingLady}
+                alt="loading"
+              />
+            </StyleRoot>
+          )}
+
           <div className="banner-mini-2 p-2">
             <div className="text-1 ml-2">15K</div>
             <div className="text-2">Employee Reveiws</div>
@@ -80,10 +123,19 @@ function App() {
           <img src={openQuote} className="quotesImg" alt="loading" />
           <img src={openQuote} className="rightQuote quotesImg" alt="loading" />
         </div>
-        <div className="ml-4 pl-10 pr-2 quote-text">
-          A life spent making mistakes is not only more honorable, but more
-          useful than a life spent doing nothing.
-        </div>
+        {firstElement ? (
+          <StyleRoot>
+            <div className="ml-4 pl-10 pr-2 quote-text">
+              A life spent making mistakes is not only more honorable, but more
+              useful than a life spent doing nothing.
+            </div>
+          </StyleRoot>
+        ) : (
+          <div className="ml-4 pl-10 pr-2 quote-text">
+            If you can't explain it to a six year old, you don't understand it
+            yourself
+          </div>
+        )}
         <div className="flex closingQuotes">
           <img src={closingQuotes} className="quotesImg" alt="loading" />
           <img
