@@ -40,11 +40,12 @@
 
   .p-title {
     font-size: 30px;
-    width: 300px;
+    width: 90%;
     line-height: 30px;
   }
 
   .s-title {
+    padding-top: 20px;
     font-size: 13px;
     width: 80%;
     color: #747474;
@@ -61,14 +62,13 @@
     height: 42px;
     position: inherit;
     margin-top: 8px;
-    // left: 574px;
-    // top: 394px;
   }
 
   // Review
   .review-section {
     grid-template-columns: repeat(1, 1fr);
     height: 100%;
+    width: 90%;
   }
 
   .review-box {
@@ -115,6 +115,10 @@
     height: 40px;
     width: 103px;
     margin: 0;
+  }
+
+  .subscribe-section .input-form input::placeholder {
+    font-size: 10px;
   }
 
   // Social

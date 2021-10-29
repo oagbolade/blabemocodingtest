@@ -7,7 +7,7 @@ import avatar1 from "./../../assets/images/avatar1.png";
 export default function ReviewOne() {
   return (
     <div className="review-box">
-      <div className="p-6">
+      <div className="p-3 md:p-6">
         <div className="text-2 flex mb-4">
           <img src={rating} alt="loading" />
           <img src={rating} alt="loading" />
