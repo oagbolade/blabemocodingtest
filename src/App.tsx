@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className="my-container">
-      <nav className="md:hidden navbar">
+      <nav className="lg:hidden navbar">
         <div onClick={toggleMenu} className="burgar">
           <div></div>
           <div></div>
@@ -289,7 +289,7 @@ function App() {
           </div>
         </div>
       </section>
-      <footer className="md:flex text-white">
+      <footer className="lg:flex text-white">
         <div className="hide-section invisible md:visible section-1">
           <div className="about-text">
             This platform for minority groups to express their opinions on
@@ -331,7 +331,7 @@ function App() {
           </div>
         </div>
 
-        <div className="md:invisible section-1">
+        <div className="lg:invisible section-1">
           <div className="about-text">
             This platform for minority groups to express their opinions on
             employment, workplace experiences and rate employers.
