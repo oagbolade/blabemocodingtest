@@ -1,0 +1,12 @@
+// Break Points
+// Tablet 800
+// Mobile 500
+@media (max-width: 600px) {
+  .navbar .left-navbar {
+    width: 0;
+  }
+
+  .navbar .right-navbar {
+    width: 100%;
+  }
+}

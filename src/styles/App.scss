@@ -1,10 +1,12 @@
+@import "mobile.scss";
+
 $orange-color: #ff6634;
 
 body {
   padding: 0;
   margin: 0;
   font-family: "Montserrat";
-  width: 100%;
+  width: 100vw;
 }
 
 nav,
@@ -372,9 +374,12 @@ nav ul li {
 }
 
 // social-section
+.social {
+  border-bottom-width: thin;
+}
+
 .social-section {
-  background-color: #fefefe;
-  height: 133px;
+  background-color: #fefefe !important;
   width: 90%;
   margin: 0 auto;
 }
@@ -382,6 +387,153 @@ nav ul li {
 .social-section img {
   height: 61.721229553222656px;
   width: 152px;
+}
+
+// advert-section
+.adds-section {
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+}
+
+section .box {
+  height: 317px;
+  width: 387px;
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+  background: #fbfbfb;
+}
+
+.adds-section .box-container {
+  width: 70%;
+  padding-top: 150px;
+}
+
+.adds-section .box-text {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #c2c2c2;
+  top: 50%;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.get-started {
+  margin-top: 120px;
+  margin-bottom: 100px;
+  height: 188px;
+  width: 1083px;
+  border-radius: 8px;
+  background: #ffebff;
+}
+
+.get-started .form-button {
+  background-color: $orange-color;
+  font-size: 17px;
+  height: 54px;
+  width: 223px;
+  border-radius: 4px;
+  font-weight: 400;
+  line-height: 21px;
+
+  position: relative;
+  top: -120%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.get-started .sec-1 {
+  width: 50%;
+  padding-top: 60px;
+}
+
+.get-started .sec-1 .text {
+  width: 389px;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.get-started .sec-2 {
+  width: 50%;
+  height: 300px;
+}
+
+.get-started img {
+  height: 176px;
+  width: 402px;
+}
+
+// Footer
+footer {
+  background: #1f2131;
+  height: 430px;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+}
+
+footer .section-1 {
+  padding-top: 140px;
+  padding-left: 80px;
+  width: 40%;
+}
+
+footer .section-1 .about-text {
+  height: 67px;
+  width: 379px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  color: gray;
+}
+
+footer .section-1 .text-2 {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: grey;
+}
+
+.social-img {
+  border-radius: 50%;
+  border: 1px solid #393c4d;
+  padding: 15px;
+}
+
+footer .section-2 {
+  width: 40%;
+}
+
+footer .section-2 span {
+  height: 19px;
+  width: 168px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 19px;
+  padding-bottom: 20px;
+}
+
+footer .section-2 li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 23px;
+  width: 168px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: grey;
 }
 
 @media (max-width: 600px) {

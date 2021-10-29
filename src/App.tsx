@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.scss";
+import "./styles/App.scss";
 import openQuote from "./assets/images/openQuote.svg";
 import closingQuotes from "./assets/images/closingQuotes.svg";
 import smilingMan from "./assets/images/smilingMan.png";
@@ -13,9 +13,13 @@ import envelope from "./assets/images/envelope.svg";
 import ebay from "./assets/images/ebay.png";
 import monster from "./assets/images/monster.png";
 import indeed from "./assets/images/indeed.png";
-import linkedin from "./assets/images/linkedin.png";
+import linkedinImg from "./assets/images/linkedin.png";
 import godaddy from "./assets/images/godaddy.png";
-import { fadeIn, bounce } from "react-animations";
+import rectangle from "./assets/images/rectangle.png";
+import facebook from "./assets/images/social/facebook.svg";
+import twitter from "./assets/images/social/twitter.svg";
+import linkedin from "./assets/images/social/linkedin.svg";
+import { fadeIn, bounceIn } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 import ReviewOne from "./components/Reviews/ReviewOne";
 
@@ -27,8 +31,8 @@ const styles = {
   },
   bounce: {
     animation: "x 1s",
-    animationName: Radium.keyframes(bounce, "bounce"),
-    animationDuration: "3s",
+    animationName: Radium.keyframes(bounceIn, "bounce"),
+    animationDuration: "1s",
   },
 };
 
@@ -235,16 +239,88 @@ function App() {
           <img className="mx-auto py-20" src={envelope} alt="loading" />
         </div>
       </section>
-      <section className="social-section">
-        <div className="flex py-6">
-          <img className="mx-auto" src={ebay} alt="loading" />
-          <img className="mx-auto" src={linkedin} alt="loading" />
-          <img className="mx-auto" src={indeed} alt="loading" />
-          <img className="mx-auto" src={godaddy} alt="loading" />
-          <img className="mx-auto" src={monster} alt="loading" />
+      <section className="social">
+        <div className="social social-section">
+          <div className="flex py-6">
+            <img className="mx-auto" src={ebay} alt="loading" />
+            <img className="mx-auto" src={linkedinImg} alt="loading" />
+            <img className="mx-auto" src={indeed} alt="loading" />
+            <img className="mx-auto" src={godaddy} alt="loading" />
+            <img className="mx-auto" src={monster} alt="loading" />
+          </div>
         </div>
       </section>
-      <footer></footer>
+      <section className="adds-section">
+        <div className="flex mx-auto box-container">
+          <div className="box text-center">
+            <span className="box-text"> Advertisement</span>
+          </div>
+          <div className="mx-10 box text-center">
+            <span className="box-text"> Advertisement</span>
+          </div>
+          <div className="box text-center">
+            <span className="box-text"> Advertisement</span>
+          </div>
+        </div>
+
+        <div className="mx-auto get-started">
+          <div className="flex">
+            <div className="sec-1 grid justify-items-center">
+              <span className="text">
+                Get started today sign up and start reveiwing business.{" "}
+              </span>
+            </div>
+            <div className="grid justify-items-center align-middle sec-2 inline-block align-middle">
+              <img className="m-0 inline-block" src={rectangle} alt="Loading" />
+              <button className="form-button text-white">
+                Create free Account
+              </button>{" "}
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer className="flex text-white">
+        <div className="section-1">
+          <div className="about-text">
+            This platform for minority groups to express their opinions on
+            employment, workplace experiences and rate employers.
+          </div>
+          <div className="flex mt-8">
+            <img className="" src={facebook} alt="Loading" />
+            <img className="social-img mx-4" src={twitter} alt="Loading" />
+            <img className="social-img" src={linkedin} alt="Loading" />
+          </div>
+          <div className="mt-20 text-2">© Copyright 2021 </div>
+        </div>
+        <div className="mx-auto flex section-2">
+          <div className="pt-20">
+            <span>Company</span>
+            <ul>
+              <li>About Us</li>
+              <li>Contact Us</li>
+              <li>Terms of Use</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+          <div className="pt-20">
+            <span>Features</span>
+            <ul>
+              <li>Timeline</li>
+              <li>Peer Review</li>
+              <li>Create Account</li>
+              <li>Sign In</li>
+            </ul>
+          </div>
+          <div className="pt-20">
+            <span>Contact Us</span>
+            <ul>
+              <li>inquiry@thaapp.com</li>
+              <li>1-800-200-300</li>
+              <li>54 Curragh birin, Castletroy, Limerick, Ireland</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
