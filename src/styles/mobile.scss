@@ -48,12 +48,12 @@
 
   .s-title {
     font-size: 13px;
-    width: 352px;
+    width: 80%;
     color: #747474;
   }
 
   .banner-section .input-form input {
-    width: 326px;
+    width: 90%;
     height: 52px;
   }
 
@@ -76,10 +76,16 @@
 
   .review-box {
     margin-top: 20px;
+    width: 90%;
+  }
+
+  .review-box .text-1 {
+    width: 90%;
   }
 
   .subscribe-section {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -95,7 +101,7 @@
 
   .subscribe-section .text-2 {
     font-size: 12px;
-    width: 320px;
+    width: 80%;
   }
 
   .subscribe-section .section-2 img {
@@ -104,7 +110,7 @@
 
   .subscribe-section .input-form input {
     height: 50px;
-    width: 299px;
+    width: 90%;
     margin-bottom: 10px;
   }
 
@@ -126,8 +132,12 @@
 
   section .box {
     height: 217px;
-    width: 257px;
+    width: 95%;
     margin-top: 15px;
+  }
+
+  .adds-section .box-text {
+    font-size: 15px;
   }
 
   // Get started
@@ -173,7 +183,7 @@
 
   footer .section-1 {
     padding: 50px;
-    width: 90%;
+    width: 100%;
     margin: 60px auto;
   }
 
@@ -187,7 +197,7 @@
   }
 
   footer .section-1 .about-text {
-    width: 279px;
+    width: 98%;
     font-size: 12px;
   }
 
@@ -195,21 +205,211 @@
   .hide-section {
     display: none;
   }
-
-  footer .section-2 li {
-    // height: auto;
-    // padding-top: 15px;
-    // padding-bottom: 15px;
-  }
 }
 
 // Tablet 800
-@media only screen and (max-width: 600px) {
-  .navbar .left-navbar {
+@media only screen and (max-width: 800px) {
+  // Navbar
+  nav,
+  nav ul {
+    display: inline;
+  }
+
+  nav {
+    padding: 0;
+    margin: 0;
+  }
+
+  .signup-list .signup-button {
+    text-decoration: none !important;
+  }
+
+  .navbar .right-navbar ul {
+    padding-top: 15px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  nav ul li {
+    margin-top: 15px;
+  }
+
+  // Banner Section
+  .banner-section {
+    height: auto;
+    padding-bottom: 88px;
+  }
+
+  .search-form {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 88px;
+  }
+
+  .p-title {
+    font-size: 30px;
+    width: 300px;
+    line-height: 30px;
+  }
+
+  .s-title {
+    font-size: 13px;
+    width: 80%;
+    color: #747474;
+  }
+
+  .banner-section .input-form input {
+    width: 90%;
+    height: 52px;
+  }
+
+  .banner-section .input-form .form-button {
+    font-size: 14px;
+    width: 103px;
+    height: 42px;
+    position: inherit;
+    margin-top: 8px;
+    // left: 574px;
+    // top: 394px;
+  }
+
+  // Review
+  .review-section {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+    height: 100%;
+  }
+
+  .review-box {
+    margin-top: 20px;
+    width: 90%;
+  }
+
+  .review-box .text-1 {
+    width: 90%;
+  }
+
+  .subscribe-section {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .subscribe-section .section-1 {
+    width: 90%;
+    padding: 20px 20px;
+    margin: 0 auto;
+  }
+
+  .subscribe-section .text-1 {
+    font-size: 19px;
+  }
+
+  .subscribe-section .text-2 {
+    font-size: 12px;
+    width: 80%;
+  }
+
+  .subscribe-section .section-2 img {
+    display: none;
+  }
+
+  .subscribe-section .input-form input {
+    height: 50px;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .subscribe-section .input-form .form-button {
+    height: 40px;
+    width: 103px;
+    margin: 0;
+  }
+
+  // Social
+  .social .social-brand {
+    margin-top: 10px;
+  }
+
+  // Advertisement
+  .adds-section .box-container {
+    padding-top: 60px;
+  }
+
+  section .box {
+    height: 217px;
+    width: 95%;
+    margin-top: 15px;
+  }
+
+  .adds-section .box-text {
+    font-size: 15px;
+  }
+
+  // Get started
+  .get-started {
+    padding: 20px;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    height: 288px;
+    width: 100%;
+  }
+
+  .get-started .main-sec {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .get-started img {
+    display: none;
+  }
+
+  .get-started .sec-1 {
     width: 0;
   }
 
-  .navbar .right-navbar {
+  .get-started .form-button {
+    font-size: 14px;
+    margin-top: 40px;
+    position: inherit;
+    margin-left: 100px;
+    height: 50px;
+    width: 203px;
+  }
+
+  .get-started .sec-1 .text {
+    font-size: 20px;
+    width: 240px;
+  }
+
+  // Footer
+  footer {
+    height: auto;
+  }
+
+  footer .section-1 {
+    padding: 50px;
     width: 100%;
+    margin: 60px auto;
+  }
+
+  footer .section-2 {
+    padding-top: 50px;
+  }
+
+  footer .section-1 .text-2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  footer .section-1 .about-text {
+    width: 98%;
+    font-size: 12px;
+  }
+
+  footer .hide-section,
+  .hide-section {
+    display: none;
   }
 }

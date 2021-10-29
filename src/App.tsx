@@ -336,7 +336,7 @@ function App() {
             This platform for minority groups to express their opinions on
             employment, workplace experiences and rate employers.
           </div>
-          <div className="flex mt-8">
+          <div className="flex mt-8 pt-5">
             <img className="" src={facebook} alt="Loading" />
             <img className="social-img mx-4" src={twitter} alt="Loading" />
             <img className="social-img" src={linkedin} alt="Loading" />
