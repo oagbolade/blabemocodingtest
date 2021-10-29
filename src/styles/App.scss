@@ -248,6 +248,27 @@ nav ul li {
   margin-left: 80px;
 }
 
+.dotted-switches {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  justify-content: center;
+}
+
+.dotted-switches div:nth-child(1) {
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  background: #8a8a8a;
+}
+
+.dotted-switches div {
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  background: white;
+  border-width: thin;
+}
+
 // Review Section
 .review-heading {
   width: 100%;

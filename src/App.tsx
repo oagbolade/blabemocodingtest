@@ -218,6 +218,11 @@ function App() {
             <ReviewOne />
           </div>
         </div>
+        <div className="dotted-switches flex">
+          <div></div>
+          <div className="mx-3"></div>
+          <div></div>
+        </div>
       </section>
       <section className="md:flex subscribe-section">
         <div className="md:py-20 mx-auto section-1">
