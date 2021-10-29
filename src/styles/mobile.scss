@@ -3,7 +3,71 @@
 // Mobile 500
 @media only screen and (max-width: 500px) {
   // Navbar
+  nav,
+  nav ul {
+    display: inline;
+  }
 
+  nav {
+    padding: 0;
+    margin: 0;
+  }
+
+  .signup-list .signup-button {
+    text-decoration: none !important;
+  }
+
+  .navbar .right-navbar ul {
+    padding-top: 15px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  nav ul li {
+    margin-top: 15px;
+  }
+
+  // Banner Section
+  .banner-section {
+    height: auto;
+    padding-bottom: 88px;
+  }
+
+  .search-form {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 88px;
+  }
+
+  .p-title {
+    font-size: 30px;
+    width: 300px;
+    line-height: 30px;
+  }
+
+  .s-title {
+    font-size: 13px;
+    width: 352px;
+    color: #747474;
+  }
+
+  .banner-section .input-form input {
+    width: 326px;
+    height: 52px;
+  }
+
+  .banner-section .input-form .form-button {
+    font-size: 14px;
+    width: 103px;
+    height: 42px;
+    position: inherit;
+    margin-top: 8px;
+    // left: 574px;
+    // top: 394px;
+  }
+
+  // Review
   .review-section {
     grid-template-columns: repeat(1, 1fr);
     width: 80%;
@@ -72,6 +136,7 @@
     margin-top: 120px;
     margin-bottom: 100px;
     height: 288px;
+    width: 100%;
   }
 
   .get-started .main-sec {
@@ -126,7 +191,8 @@
     font-size: 12px;
   }
 
-  footer .hide-section {
+  footer .hide-section,
+  .hide-section {
     display: none;
   }
 

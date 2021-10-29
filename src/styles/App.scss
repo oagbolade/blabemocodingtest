@@ -10,6 +10,17 @@ body {
   width: 100%;
 }
 
+.burgar {
+  padding: 0 20px;
+}
+
+.burgar div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
 nav,
 nav ul {
   display: flex;
@@ -98,7 +109,7 @@ nav ul li {
 }
 
 .s-title {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 19.5px;
   width: 482px;
@@ -533,16 +544,6 @@ footer .section-2 li {
   letter-spacing: 0em;
   text-align: left;
   color: grey;
-}
-
-@media (max-width: 600px) {
-  .navbar .left-navbar {
-    width: 0;
-  }
-
-  .navbar .right-navbar {
-    width: 100%;
-  }
 }
 
 @import "mobile.scss";

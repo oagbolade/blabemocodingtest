@@ -37,6 +37,11 @@ const styles = {
 
 function App() {
   const [firstElement, setFirstElement] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -46,8 +51,34 @@ function App() {
 
   return (
     <div className="my-container">
-      <nav className="navbar">
-        <div className="sm:hidden left-navbar"></div>
+      <nav className="md:hidden navbar">
+        <div onClick={toggleMenu} className="burgar">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        {showMenu ? (
+          <div className="right-navbar">
+            <ul className="block list-none">
+              <li style={{ textDecoration: "underline" }} className="">
+                Timeline
+              </li>
+              <li style={{ textDecoration: "underline" }} className="mx-4-">
+                Peer Review
+              </li>
+              <li style={{ textDecoration: "underline" }} className="mx-5-">
+                Login
+              </li>
+              <li className="signup-list">
+                <button className="signup-button">SignUp</button>
+              </li>
+            </ul>
+          </div>
+        ) : null}
+      </nav>
+
+      <nav className="navbar hide-section">
+        <div className="left-navbar"></div>
         <div className="right-navbar">
           <ul className="list-none">
             <li className="">Timeline</li>
@@ -59,12 +90,13 @@ function App() {
           </ul>
         </div>
       </nav>
-      <section className="flex banner-section">
+
+      <section className="md:flex banner-section">
         <div className="search-form">
-          <div className="p-title mb-2">
+          <div className="justify-content p-title mb-2">
             Grow your business with real-time reviews
           </div>
-          <div className="s-title mb-8">
+          <div className="mt-2 md:mt-2 s-title mb-8">
             Find out more on what people and saying about your company, with
             real time reveiw and data.
           </div>
@@ -79,7 +111,8 @@ function App() {
             </span>
           </div>
         </div>
-        <div className="banner-img-section">
+        {/* Temp will remove */}
+        <div className="hide-section banner-img-section">
           <div className="banner-mini-1 p-2">
             <img src={miniArc} alt="loading" />
           </div>
@@ -129,7 +162,7 @@ function App() {
           </div>
         </div>
       </section>
-      <div className="quote">
+      <div className="hide-section quote">
         <div className="flex">
           <img src={openQuote} className="quotesImg" alt="loading" />
           <img src={openQuote} className="rightQuote quotesImg" alt="loading" />
