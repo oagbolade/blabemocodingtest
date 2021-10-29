@@ -1,12 +1,13 @@
-@import "mobile.scss";
-
 $orange-color: #ff6634;
 
 body {
   padding: 0;
   margin: 0;
   font-family: "Montserrat";
-  width: 100vw;
+}
+
+.my-container {
+  width: 100%;
 }
 
 nav,
@@ -18,7 +19,6 @@ nav ul {
   padding: 32px;
   height: 83px;
   width: 100%;
-  overflow: hidden;
 }
 
 .navbar .left-navbar {
@@ -155,11 +155,11 @@ nav ul li {
 .banner-mini-2 {
   height: 84px;
   width: 86px;
-  left: 1228px;
-  top: 294px;
+  left: 728px;
+  top: -444px;
   border-radius: 6px;
   background-color: white;
-  position: absolute;
+  position: relative;
 }
 
 .banner-mini-3 {
@@ -287,7 +287,7 @@ nav ul li {
 
 .review-box .avatar-section {
   background-color: #fcfcfc;
-  height: 70px;
+  // height: 70px;
 }
 
 .review-box {
@@ -305,7 +305,7 @@ nav ul li {
 
 .review-section {
   display: grid;
-  height: 600px;
+  // height: 100%;
   grid-template-columns: repeat(3, 1fr);
   width: 60%;
 }
@@ -315,7 +315,7 @@ nav ul li {
 .subscribe-section {
   background: #f8f8f8;
   width: 100%;
-  height: 380px;
+  // height: 380px;
 }
 
 .subscribe-section .section-1 {
@@ -437,7 +437,6 @@ section .box {
   border-radius: 4px;
   font-weight: 400;
   line-height: 21px;
-
   position: relative;
   top: -120%;
   left: 30%;
@@ -545,3 +544,5 @@ footer .section-2 li {
     width: 100%;
   }
 }
+
+@import "mobile.scss";

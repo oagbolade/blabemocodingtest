@@ -8,7 +8,6 @@ import miniArc from "./assets/images/miniAcr.svg";
 import avatar1 from "./assets/images/avatar1.png";
 import rating from "./assets/images/rating.svg";
 import emptyRating from "./assets/images/emptyRating.svg";
-import briefcase from "./assets/images/briefcase.svg";
 import envelope from "./assets/images/envelope.svg";
 import ebay from "./assets/images/ebay.png";
 import monster from "./assets/images/monster.png";
@@ -46,9 +45,9 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="my-container">
       <nav className="navbar">
-        <div className="left-navbar"></div>
+        <div className="sm:hidden left-navbar"></div>
         <div className="right-navbar">
           <ul className="list-none">
             <li className="">Timeline</li>
@@ -166,46 +165,13 @@ function App() {
           </div>
         </div>
         <div className="review-section mx-auto">
-          <div className="review-box">
-            <div className="p-6">
-              <div className="text-2 flex mb-4">
-                <img src={rating} alt="loading" />
-                <img src={rating} alt="loading" />
-                <img src={rating} alt="loading" />
-                <img src={rating} alt="loading" />
-                <img src={emptyRating} alt="loading" />
-                <span className="num-rating">4.0</span>
-              </div>
-              <div className="text-1 mb-3">
-                Great place to work with the good work culture and people
-                skills.
-              </div>
-
-              <div className="flex mb-3">
-                <div className="flex-1- mid-text-1 p-1 text-center">
-                  sexual assault
-                </div>
-                <div className="mt-2 mid-text-2">
-                  <img className="inline mr-2" src={briefcase} alt="loading" />
-                  Google
-                </div>
-              </div>
-            </div>
-
-            <div className="avatar-section p-5">
-              <div className="flex avatar-section pt-4-">
-                <img className="avatar" src={avatar1} alt="loading" />
-                <div className="mt-2">
-                  <div className="text-2 ml-2">Anonymous</div>
-                  <div className="text-3 ml-2">Business Analysis</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mx-20-">
+          <div className="mb-10">
             <ReviewOne />
           </div>
-          <div>
+          <div className="">
+            <ReviewOne />
+          </div>
+          <div className="">
             <ReviewOne />
           </div>
 
@@ -220,10 +186,12 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="flex subscribe-section">
-        <div className="py-20 mx-auto section-1">
-          <div className="text-1">Subscribe to our Newsletter</div>
-          <div className="mt-2 mb-4 text-2 justify-content">
+      <section className="md:flex subscribe-section">
+        <div className="md:py-20 mx-auto section-1">
+          <div className="text-1 justify-content">
+            Subscribe to our Newsletter
+          </div>
+          <div className="mt-2 mb-4 text-2 justify-content-">
             Get latest update lorem Ipsum is that it has a more-or-less normal
             distribution of letters, as opposed to using 'Content here, content
             here
@@ -240,22 +208,26 @@ function App() {
         </div>
       </section>
       <section className="social">
-        <div className="social social-section">
-          <div className="flex py-6">
-            <img className="mx-auto" src={ebay} alt="loading" />
-            <img className="mx-auto" src={linkedinImg} alt="loading" />
-            <img className="mx-auto" src={indeed} alt="loading" />
-            <img className="mx-auto" src={godaddy} alt="loading" />
-            <img className="mx-auto" src={monster} alt="loading" />
+        <div className="social-section">
+          <div className="md:flex py-6">
+            <img className="mx-auto social-brand" src={ebay} alt="loading" />
+            <img
+              className="mx-auto social-brand"
+              src={linkedinImg}
+              alt="loading"
+            />
+            <img className="mx-auto social-brand" src={indeed} alt="loading" />
+            <img className="mx-auto social-brand" src={godaddy} alt="loading" />
+            <img className="mx-auto social-brand" src={monster} alt="loading" />
           </div>
         </div>
       </section>
       <section className="adds-section">
-        <div className="flex mx-auto box-container">
+        <div className="md:flex mx-auto box-container">
           <div className="box text-center">
             <span className="box-text"> Advertisement</span>
           </div>
-          <div className="mx-10 box text-center">
+          <div className="md:mx-10 box text-center">
             <span className="box-text"> Advertisement</span>
           </div>
           <div className="box text-center">
@@ -264,13 +236,13 @@ function App() {
         </div>
 
         <div className="mx-auto get-started">
-          <div className="flex">
+          <div className="main-sec md:flex">
             <div className="sec-1 grid justify-items-center">
               <span className="text">
                 Get started today sign up and start reveiwing business.{" "}
               </span>
             </div>
-            <div className="grid justify-items-center align-middle sec-2 inline-block align-middle">
+            <div className="sm:mx-auto grid justify-items-center align-middle sec-2 inline-block align-middle">
               <img className="m-0 inline-block" src={rectangle} alt="Loading" />
               <button className="form-button text-white">
                 Create free Account
@@ -279,8 +251,8 @@ function App() {
           </div>
         </div>
       </section>
-      <footer className="flex text-white">
-        <div className="section-1">
+      <footer className="md:flex text-white">
+        <div className="hide-section invisible md:visible section-1">
           <div className="about-text">
             This platform for minority groups to express their opinions on
             employment, workplace experiences and rate employers.
@@ -290,10 +262,10 @@ function App() {
             <img className="social-img mx-4" src={twitter} alt="Loading" />
             <img className="social-img" src={linkedin} alt="Loading" />
           </div>
-          <div className="mt-20 text-2">© Copyright 2021 </div>
+          <div className="md:mt-20 text-2">© Copyright 2021 </div>
         </div>
-        <div className="mx-auto flex section-2">
-          <div className="pt-20">
+        <div className="mx-auto md:flex section-2">
+          <div className="md:pt-20">
             <span>Company</span>
             <ul>
               <li>About Us</li>
@@ -320,6 +292,20 @@ function App() {
             </ul>
           </div>
         </div>
+
+        <div className="md:invisible section-1">
+          <div className="about-text">
+            This platform for minority groups to express their opinions on
+            employment, workplace experiences and rate employers.
+          </div>
+          <div className="flex mt-8">
+            <img className="" src={facebook} alt="Loading" />
+            <img className="social-img mx-4" src={twitter} alt="Loading" />
+            <img className="social-img" src={linkedin} alt="Loading" />
+          </div>
+          <div className="md:mt-20 text-2">© Copyright 2021 </div>
+        </div>
+        <div className="py-4"></div>
       </footer>
     </div>
   );
